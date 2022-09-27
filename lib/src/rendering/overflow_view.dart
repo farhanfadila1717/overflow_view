@@ -902,7 +902,9 @@ class RenderOverflowView extends RenderBox
             break;
           }
 
-          final RenderBox child = renderBoxes.removeLast();
+          final RenderBox child = renderBoxes.length <= 1
+              ? renderBoxes.first
+              : renderBoxes.removeLast();
           final OverflowViewParentData childParentData =
               child.parentData as OverflowViewParentData;
           childParentData.offstage = true;

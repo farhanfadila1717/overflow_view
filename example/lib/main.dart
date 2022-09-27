@@ -364,7 +364,7 @@ class _MenuItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FlatButton(
+    return ElevatedButton(
       onPressed: () {},
       child: Row(
         children: [
